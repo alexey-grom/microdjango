@@ -1,0 +1,21 @@
+{% spaceless %}
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title></title>
+    </head>
+    <body>
+        <h1>List&nbsp;<a href="{% url 'create' %}">Add</a></h1>
+        {% for object in object_list %}
+            <div>
+                <p>Title: <strong>{{ object.title|default:'&ndash;' }}</strong></p>
+                <p>Created: {{ object.created }}</p>
+            </div>
+            {% if not forloop.last %}
+                <hr>
+            {% endif %}
+        {% endfor %}
+    </body>
+    </html>
+{% endspaceless %}

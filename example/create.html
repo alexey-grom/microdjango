@@ -1,0 +1,23 @@
+{% spaceless %}
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title></title>
+    </head>
+    <body>
+        <h1>Create</h1>
+
+        <form action="" method="POST">
+            {% csrf_token %}
+            <div>
+                {{ form }}
+            </div>
+            <div>
+                <input type="submit" value="Submit">
+            </div>
+        </form>
+
+    </body>
+    </html>
+{% endspaceless %}

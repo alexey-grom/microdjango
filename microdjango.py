@@ -54,7 +54,7 @@ class MicroDjango(object):
     def syncdb(self):
         from django.db import connection
         tables = connection.introspection.\
-            get_table_list(connection.cursor())
+            table_names(connection.cursor())
 
         for model in self.app_config.get_models():
             if model._meta.db_table in tables:

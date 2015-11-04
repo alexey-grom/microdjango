@@ -2,7 +2,7 @@
 
 Run django as microframework with ORM. With models, yeah!
 
-[example](example/run.py)
+[Example (3rd-party apps + models + CBV)](example/run.py)
 
 
 ## Related links
